@@ -1,50 +1,55 @@
-# Mass calculator
+# Mass Calculator Application
 
+This project is a mass calculator application that allows users to calculate the masses of elements in chemical formulas. It provides a command-line interface for user interaction and supports batch processing of formulas from various input sources.
 
-## **Overview**
-This project is a Python script that calculates the masses of elements in chemical formulas. For example, you want to calculate how much of each element you need to take to synthesize a compound with a known ratio of substances.
+## Project Structure
+
 ```
-We have to make 0.2g of GdOsIn
-So this script will calculate how much of each element you should take:
-
-Element masses:
-Gd: 0.0680 g
-Os: 0.0823 g
-In: 0.0497 g
-Total mass: 0.2 g
-```
-It supports multiple input methods and batch processing, outputting results to an Excel file. The script can handle input from direct user entry, pasted text, .txt files, and .xlsx files.
-
-## **Usage**
-
-**Running the Script** : run the `main.py` script.
-
-### **Input Methods**
-1. Enter the chemical formula
-You will be prompted to enter a chemical formula and the total mass of the mixture.
-The script will calculate and display the masses of each element.
-2. Paste column of text with formulas
-You will be prompted to paste a column of formulas and type 'done' when finished.
-The script will process these formulas and generate an Excel file with the results.
-3. Read from txt file with formulas
-The script will list all .txt files in the current directory.
-Choose a file by its number.
-The script will process the formulas from the file and generate an Excel file with the results.
-4. Read from Excel file with formulas
-The script will list all .xlsx files in the current directory.
-Choose a file by its number.
-The script will process the formulas from the file and generate an Excel file with the results.
-
-### **Output adjustment**
-By default as an output for the options 2-4 it calculates the masses for the mixtures of 0.1g, 0.15g, 0.2g, 0.25g, 0.3g, 0,4g, 0,5g
-
-If you want to change it you can do so in the `unil/batch_processing.py` by changing the numbers in the 7th line:
-```
-def process_formulas(formulas, filename, total_masses=[0.10, 0.15, 0.20, 0.25, 0.30, 0.40, 0.50]):  # change total mass here if needed
+mass_calculator
+├── src
+│   ├── main.py                # Main logic of the mass calculator application
+│   ├── util
+│   │   ├── __init__.py        # Initialization file for the util package
+│   │   └── batch_processing.py  # Utility functions for batch processing of formulas
+├── requirements.txt            # Python dependencies required for the project
+├── runtime.txt                 # Python runtime version for Heroku
+├── Procfile                    # Commands executed by the Heroku app on startup
+└── README.md                   # Documentation for the project
 ```
 
+## Installation
 
-### **After Processing**
-After processing, you will be asked if you want to finish the calculation. Type 'Y' to finish or 'N' to return to the input method selection menu.
+1. Clone the repository:
+   ```
+   git clone <repository-url>
+   cd mass_calculator
+   ```
 
+2. Install the required dependencies:
+   ```
+   pip install -r requirements.txt
+   ```
 
+3. Ensure you have the correct Python version specified in `runtime.txt`.
+
+## Usage
+
+To run the mass calculator application, execute the following command:
+
+```
+python src/main.py
+```
+
+Follow the prompts to enter chemical formulas and calculate element masses.
+
+## Batch Processing
+
+The application supports batch processing of chemical formulas from text files and Excel files. You can use the utility functions in `src/util/batch_processing.py` to read formulas from different input sources.
+
+## Contributing
+
+Contributions are welcome! Please open an issue or submit a pull request for any enhancements or bug fixes.
+
+## License
+
+This project is licensed under the MIT License. See the LICENSE file for more details.
