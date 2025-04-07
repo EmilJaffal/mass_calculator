@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Results</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container" id="results-container">
+        {% if known_element and known_mass %}
+        <h1>Results for fast-oxidizing elements</h1>
+        <p><strong>Formula:</strong> {{ formula }}</p>
+        <p><strong>Known element:</strong> {{ known_element }}</p>
+        <p><strong>Known mass:</strong> {{ known_mass }} g</p>
+        {% else %}
+        <h1>Results</h1>
+        <p><strong>Formula:</strong> {{ formula }}</p>
+        <p><strong>Total mass:</strong> {{ total_mass }} g</p>
+        {% endif %}
+        
+        <h2>Element masses:</h2>
+        <ul>
+            {% for element, mass in masses.items() %}
+            <p><strong>{{ element }}:</strong> {{ "%.4f"|format(mass) }} g</p>
+            {% endfor %}
+        </ul>
+        <a href="/" class="button">Back to home</a>
+    </div>
+</body>
+</html>

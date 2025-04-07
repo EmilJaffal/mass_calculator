@@ -1,0 +1,157 @@
+/* Reset CSS */
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400italic");
+html, body, div, span, applet, object,
+iframe, h1, h2, h3, h4, h5, h6, p, blockquote,
+pre, a, abbr, acronym, address, big, cite,
+code, del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var, b,
+u, i, center, dl, dt, dd, ol, ul, li, fieldset,
+form, label, legend, table, caption, tbody,
+tfoot, thead, tr, th, td, article, aside,
+canvas, details, embed, figure, figcaption,
+footer, header, hgroup, menu, nav, output, ruby,
+section, summary, time, mark, audio, video, title{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* Center and Style Title */
+title {
+    font-size: 40px; 
+    text-align: center; /* Center the title */
+    margin-bottom: 20px; /* Add spacing below the title */
+    color: #444; /* Ensure consistent color */
+}
+
+/* Global Styles */
+body {
+    font-family: 'Source Sans Pro', sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    line-height: 1.6;
+    padding: 20px;
+}
+
+h1, h2 {
+    font-size: 30px; /* Set font size to 35px */
+    color: #444;
+    margin-bottom: 20px;
+}
+
+a {
+    color: #007BFF;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Containers for Each Option */
+.container {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.container h2 {
+    margin-bottom: 15px;
+    color: #555;
+}
+
+.container form {
+    display: flex;
+    flex-direction: column;
+}
+
+.container label {
+    margin-bottom: 5px;
+    font-size: 20px; /* Set font size to 35px */
+}
+
+.container input, .container button {
+    margin-bottom: 15px;
+    padding: 10px;
+    font-size: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.container button {
+    background-color: #007BFF;
+    color: #fff;
+    cursor: pointer;
+}
+
+.container button:hover {
+    background-color: #0056b3;
+}
+
+/* Specific Styles for Each Section */
+#single-formula {
+    border-left: 10px solid #007BFF;
+}
+
+#file-upload {
+    border-left: 10px solid #28a745;
+}
+
+#fast-oxidizing {
+    border-left: 10px solid #ffc107;
+}
+
+/* Results Container */
+#results-container {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 600px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+#results-container h1 {
+    color: #444;
+    margin-bottom: 20px;
+}
+
+#results-container p {
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+
+#results-container ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+#results-container ul li {
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+#results-container .button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 20px;
+    color: #fff;
+    background-color: #007BFF;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+#results-container .button:hover {
+    background-color: #0056b3;
+}
