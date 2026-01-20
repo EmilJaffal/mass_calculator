@@ -103,7 +103,7 @@ def index():
 
             if mode == 'single':
                 formula = request.form['formula']
-                if not re.match(r"^[A-Za-z0-9\s]+$", formula):
+                if not re.match(r"^[A-Za-z0-9\s.]+$", formula):
                     raise ValueError("Invalid formula format.")
                 total_mass = float(request.form['total_mass'])
                 ratios = get_parsed_formula(formula)
@@ -124,7 +124,7 @@ def index():
 
             elif mode == 'known':
                 formula = request.form['formula_known']
-                if not re.match(r"^[A-Za-z0-9\s]+$", formula):
+                if not re.match(r"^[A-Za-z0-9\s.]+$", formula):
                     raise ValueError("Invalid formula format.")
                 known_element = request.form['known_element']
                 known_mass = float(request.form['known_mass'])
