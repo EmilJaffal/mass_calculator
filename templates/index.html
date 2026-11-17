@@ -20,7 +20,7 @@
             <label for="formula">Formula:</label>
             <input type="text" id="formula" name="formula" required>
             <label for="total_mass">Total mass (g):</label>
-            <input type="number" id="total_mass" name="total_mass" step="0.01" required>
+            <input type="number" id="total_mass" name="total_mass" step="any" min="0" required>
             <button type="submit">Calculate</button>
         </form>
     </div>
@@ -44,7 +44,7 @@
             <label for="formula">Formula:</label>
             <input type="text" id="formula" name="formula" required>
             <label for="known_mass">Known mass (g):</label>
-            <input type="number" id="known_mass" name="known_mass" step="0.01" required>
+            <input type="number" id="known_mass" name="known_mass" step="any" min="0" required>
             <button type="submit">Calculate</button>
         </form>
     </div>
